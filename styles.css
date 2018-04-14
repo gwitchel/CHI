@@ -1,0 +1,32 @@
+
+.bckgrnd {
+     height:auto; 
+     width:90%;  
+     display: block;
+     margin-left: auto;
+     margin-right: auto 
+    }
+    .bckgrnd1 {
+        height:auto; 
+        width:100%;  
+        display: block;
+        margin-left: 0%;
+        margin-right: auto 
+       }
+.icon {
+    height:auto; 
+    width:10%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+    }
+.bttnImg2 {
+    height:auto; 
+    width:10%;  
+    display: block;
+}
+.bttnImg1 {
+    height:auto; 
+    width:15%;  
+    display: block;
+}
