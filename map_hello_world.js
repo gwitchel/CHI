@@ -8,8 +8,14 @@ function initMap() {
         var script = document.createElement('script');
         script.src = 'traumaCenterDesignations.js';
         var image = "dot1.png";
-        document.getElementsByTagName('head')[0].appendChild(script);        
-        window.traumaCenterDesignations = function(results) {
+        document.getElementsByTagName('head')[0].appendChild(script);     
+        
+        var script2 = document.createElement('script2');
+        script2.src = 'asthma.js';
+        document.getElementsByTagName('head')[0].appendChild(script2);
+        debugger;
+
+        mapTs = function(results) {
             for (var i = 0; i < results.features.length; i++) {
               var coords = results.features[i].geometry.coordinates;
               var latLng = new google.maps.LatLng(coords[1],coords[0]);
@@ -20,13 +26,15 @@ function initMap() {
              });
             }
             debugger;
+            var foo = new google.maps.Marker({
+              position: latLng,
+              map: map, 
+            })
         }
+        mapTs(ts);
         debugger; 
-        var script2 = document.createElement('script2');
-        script2.src = 'asthma.js';
-        document.getElementsByTagName('head')[0].appendChild(script2);
 
-         window.edges = function(results) {
+         mapAsthma = function(results) {
            debugger;
           for(var i = 0; i < results.features.length; i++){
             var coords = []; 
@@ -65,6 +73,7 @@ function initMap() {
           }
           debugger;
         }
+      mapAsthma(asthma);
          
 }
 
